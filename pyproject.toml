@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "warehouse-logistics-sim"
+version = "1.0.0"
+description = "End-to-end warehouse + logistics simulator: layout, ABC/EOQ inventory planning, slotting, order-picking routing heuristics, shift simulation, and Markdown/HTML reports."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+warehouse-logistics-sim = "warehouse_logistics_sim.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
