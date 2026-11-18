@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><title>Warehouse simulation — medium-warehouse-demo</title>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+margin:2rem auto;max-width:900px;padding:0 1rem;color:#1a1a1a}
+h1,h2{color:#0b3d5c}table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}
+th{background:#eef4f8}tr:nth-child(even){background:#f8f8f8}
+.kpi{font-size:1.05rem}.good{color:#1a7f37}.warn{color:#b25e09}</style>
+</head>
+<body>
+<h1>Warehouse simulation — medium-warehouse-demo</h1>
+<p>Strategy: **s_shape** · Pickers: 4 · Shift: 480 min · Batch: up to 4 orders / 20 lines</p>
+<h2>Key performance indicators</h2>
+<table>
+<tr><th>KPI</th><th>Value</th></tr>
+<tr><td>Orders arrived</td><td>360</td></tr>
+<tr><td>Orders completed</td><td>360</td></tr>
+<tr><td>Orders backlogged</td><td>0</td></tr>
+<tr><td>Lines requested</td><td>998</td></tr>
+<tr><td>Lines filled</td><td>978</td></tr>
+<tr><td>Fill rate</td><td>98.0%</td></tr>
+<tr><td>Pick rate (lines / picker-hour)</td><td>139.56</td></tr>
+<tr><td>Total distance (m)</td><td>11,843.33</td></tr>
+<tr><td>Mean order cycle time (min)</td><td>6.71</td></tr>
+<tr><td>Picker utilisation</td><td>21.9%</td></tr>
+<tr><td>Units picked</td><td>1,653</td></tr>
+</table>
+<h2>Stockouts</h2>
+<table>
+<tr><th>SKU</th><th>Unfilled lines</th></tr>
+<tr><td>HOME-008</td><td>5</td></tr>
+<tr><td>SPORT-003</td><td>4</td></tr>
+<tr><td>SPORT-004</td><td>3</td></tr>
+<tr><td>TOOL-004</td><td>2</td></tr>
+<tr><td>HOME-001</td><td>2</td></tr>
+<tr><td>FOOD-003</td><td>1</td></tr>
+<tr><td>SPORT-002</td><td>1</td></tr>
+<tr><td>ELEC-009</td><td>1</td></tr>
+<tr><td>APPAREL-007</td><td>1</td></tr>
+</table>
+<h2>Per-order results (first 20)</h2>
+<table>
+<tr><th>Order</th><th>Arrival (min)</th><th>Start</th><th>Finish</th><th>Cycle (min)</th><th>Lines filled</th><th>Distance (m)</th></tr>
+<tr><td>ORD-00197</td><td>1.14</td><td>8.19</td><td>12.69</td><td>11.56</td><td>2/2</td><td>30.50</td></tr>
+<tr><td>ORD-00156</td><td>3.20</td><td>8.19</td><td>12.69</td><td>9.50</td><td>3/3</td><td>30.50</td></tr>
+<tr><td>ORD-00212</td><td>7.09</td><td>8.19</td><td>12.69</td><td>5.60</td><td>2/2</td><td>30.50</td></tr>
+<tr><td>ORD-00272</td><td>8.19</td><td>8.19</td><td>12.69</td><td>4.50</td><td>4/4</td><td>30.50</td></tr>
+<tr><td>ORD-00130</td><td>9.44</td><td>24.87</td><td>29.21</td><td>19.76</td><td>2/2</td><td>30.08</td></tr>
+<tr><td>ORD-00003</td><td>11.93</td><td>24.87</td><td>29.21</td><td>17.28</td><td>4/4</td><td>30.08</td></tr>
+<tr><td>ORD-00106</td><td>14.03</td><td>24.87</td><td>29.21</td><td>15.18</td><td>1/1</td><td>30.08</td></tr>
+<tr><td>ORD-00046</td><td>24.87</td><td>24.87</td><td>29.21</td><td>4.34</td><td>3/3</td><td>30.08</td></tr>
+<tr><td>ORD-00002</td><td>25.32</td><td>27.03</td><td>30.36</td><td>5.04</td><td>1/1</td><td>20.92</td></tr>
+<tr><td>ORD-00254</td><td>26.08</td><td>27.03</td><td>30.36</td><td>4.28</td><td>2/2</td><td>20.92</td></tr>
+<tr><td>ORD-00140</td><td>26.53</td><td>27.03</td><td>30.36</td><td>3.83</td><td>2/2</td><td>20.92</td></tr>
+<tr><td>ORD-00077</td><td>27.03</td><td>27.03</td><td>30.36</td><td>3.33</td><td>2/2</td><td>20.92</td></tr>
+<tr><td>ORD-00030</td><td>27.50</td><td>30.94</td><td>37.65</td><td>10.15</td><td>10/10</td><td>49.67</td></tr>
+<tr><td>ORD-00295</td><td>29.97</td><td>30.94</td><td>37.65</td><td>7.67</td><td>3/3</td><td>49.67</td></tr>
+<tr><td>ORD-00217</td><td>30.62</td><td>30.94</td><td>37.65</td><td>7.03</td><td>3/3</td><td>49.67</td></tr>
+<tr><td>ORD-00281</td><td>30.94</td><td>30.94</td><td>37.65</td><td>6.71</td><td>2/2</td><td>49.67</td></tr>
+<tr><td>ORD-00240</td><td>31.77</td><td>34.08</td><td>38.88</td><td>7.12</td><td>2/2</td><td>35.08</td></tr>
+<tr><td>ORD-00105</td><td>32.19</td><td>34.08</td><td>38.88</td><td>6.69</td><td>2/2</td><td>35.08</td></tr>
+<tr><td>ORD-00205</td><td>33.02</td><td>34.08</td><td>38.88</td><td>5.86</td><td>6/6</td><td>35.08</td></tr>
+<tr><td>ORD-00207</td><td>34.08</td><td>34.08</td><td>38.88</td><td>4.81</td><td>1/1</td><td>35.08</td></tr>
+</table>
+</body>
+</html>
